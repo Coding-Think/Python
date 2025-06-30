@@ -15,7 +15,7 @@ If you are going to clean data or do something repetitive and mechanical with da
 | `\w`        | Word character                      | `\w+` matches `hello123` |
 | `\s`        | Whitespace                          | `\s+` matches space, tab, etc. |
 | `{n}`       | Exactly n repetitions               | `\d{4}` matches `2025` |
-| `{n,}`      | n or more repetitions               | `\d{2,}` matches `23`, `45678`, etc. But not`3`|
+| `{n,}`      | n or more repetitions               | `\d{2,}` matches `23`, `45678`, etc.|
 | `{n,m}`     | Between n and m repetitions         | `\d{2,4}` matches `12`, `123`, `1234` |
 | `[abc]`     | One character: a, b, or c           | `[aeiou]` matches any vowel |
 | `[^abc]`    | Any character except a, b, or c     | `[^0-9]` matches any non-digit |
