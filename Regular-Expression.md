@@ -2,7 +2,7 @@
 I had learned Python before, but I didn’t realize how important regular expressions are.  
 If you are going to clean data or do something repetitive and mechanical with data,regular expressions should be your first choice.　　
 In case you are Japanese there are Japanese website.
-[正規表現]([http://google.com](https://qiita.com/luohao0404/items/7135b2b96f9b0b196bf3))文法
+[正規表現](https://qiita.com/luohao0404/items/7135b2b96f9b0b196bf3)文法
 
 # Grammar
 | Pattern     | Meaning                             | Example |
