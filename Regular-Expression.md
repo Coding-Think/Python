@@ -21,3 +21,37 @@ If you are going to clean data or do something repetitive and mechanical with da
 | `[^abc]`    | Any character except a, b, or c     | `[^0-9]` matches any non-digit |
 | `( ... )`   | Capturing group                     | `(\d+)-(\d+)` matches `123-456` and captures `123`, `456` |
 | `|`         | OR                                  | `cat|dog` matches either `cat` or `dog` |
+
+## Special Instructions
+### different between * and +
+```Python
+import re
+
+test_cases = ["aaa", "aaab", "b", ""]
+
+pattern_star = r"a*"
+pattern_plus = r"a+"
+
+print("Testing a*")
+for s in test_cases:
+    result = re.findall(pattern_star, s)
+    print(f"Input: '{s}' => Matches: {result}")
+
+print("\nTesting a+")
+for s in test_cases:
+    result = re.findall(pattern_plus, s)
+    print(f"Input: '{s}' => Matches: {result}")
+```
+**result**  
+Testing a*  
+Input: 'aaa'  => Matches: ['aaa', '']　&nbsp;　# 2 results: 'aaa' + '' (empty match at the end)  
+Input: 'aaab' => Matches: ['aaa', '', '']　&nbsp;　# Matches 'aaa', then empty matches after 'b' and at the end  
+Input: 'b'    => Matches: ['', '']　&nbsp;　# No 'a', but empty matches at position 0 and at the end  
+Input: ''     => Matches: ['']　&nbsp;　# Empty string matches once  
+
+Testing a+  
+Input: 'aaa'  => Matches: ['aaa']　&nbsp;　# Matches one or more 'a's once  
+Input: 'aaab' => Matches: ['aaa']　&nbsp;　# Matches 'aaa', no match on 'b'  
+Input: 'b'    => Matches: []　&nbsp;　# No 'a' found, no matches  
+Input: ''     => Matches: []　&nbsp;　# Empty string, no matches  
+2. 
