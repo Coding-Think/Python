@@ -5,9 +5,13 @@ import csv
 # ログファイル
 log_text = """
 2025-06-30 14:35 顧客: 山田太郎 AUでポイントを150貯まった。
+余計なデータ：通信障害発生
 2025-06-30 15:00 顧客: 山田太郎 SoftBankでポイントを100使った。
+余計なデータ：通信障害発生
 2025/06/29 09:20 ユーザー: Suzuki AUで200ポイント貯まった。
+余計なデータ：通信障害発生
 2025-06-29 10:10 ユーザー: Suzuki SoftBankで50ポイント使った。
+余計なデータ：通信障害発生
 2025-06-28 19:00 顧客名：佐藤花子、AUで350ポイント貯まった。
 余計なデータ：通信障害発生
 """
@@ -24,7 +28,7 @@ pattern = re.compile(
 # CSVファイル作成
 with open("output.csv", "w", newline="", encoding="utf-8-sig") as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(["日時", "顧客名", "店舗名", "ポイント数", "動作"])  # 表頭
+    writer.writerow(["日時", "顧客名", "店舗名", "ポイント数", "動作"])  # Table Title
 
     for match in pattern.finditer(log_text):
         writer.writerow([
