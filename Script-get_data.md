@@ -1,3 +1,4 @@
+```Python
 import re
 import csv
 
@@ -35,3 +36,11 @@ with open("output.csv", "w", newline="", encoding="utf-8-sig") as csvfile:
         ])
 
 print("✅ CSV ファイル 'output.csv' が作成されました。")
+```
+**result**
+日時	顧客名	店舗名	ポイント数	動作
+2025-06-30 14:35	山田太郎	AU	150	貯まった
+2025-06-30 15:00	山田太郎	SoftBank	100	使った
+2025/06/29 09:20	Suzuki	AU	200	貯まった
+2025-06-29 10:10	Suzuki	SoftBank	50	使った
+2025-06-28 19:00	佐藤花子	AU	350	貯まった
