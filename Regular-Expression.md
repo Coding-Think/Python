@@ -1,6 +1,6 @@
 # Regular-Expression
 I had learned Python before, but I didn’t realize how important regular expressions are.  
-If you are going to clean data or do something repetitive and mechanical with data,regular expressions should be your first choice.　　
+If you are going to clean data or do something repetitive and mechanical with data,regular expressions should be your first choice.  
 **In case you are Japanese there are Japanese website.
 [正規表現（Regular Expressions）文法解説 - Qiita](https://qiita.com/luohao0404/items/7135b2b96f9b0b196bf3)**
 # Grammar
